@@ -21,7 +21,7 @@
 	<script src="asciinema-player.js"></script>
 	<script charset="utf-8">
 
-		function linkify(time_el, time, line, pause) {
+		function linkify(time, line, pause) {
 			if($('.time-remaining').html() == time) {
 				$('#player .line').eq(line)
 					.css('cursor', 'pointer')
