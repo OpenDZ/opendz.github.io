@@ -11,5 +11,10 @@
 <body>
 	<asciinema-player id="player" src="welcome.json" cols="160" rows="40" speed="2" autoplay="autoplay"></asciinema-player>
 	<script src="asciinema-player.js"></script>
+	<script charset="utf-8">
+		$('.time-remaining').bind("DOMSubtreeModified",function(){
+			if($(this).html() == '-00:03') $('#player').pause();
+		});
+	</script>
 </body>
 </html>
