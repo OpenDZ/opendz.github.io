@@ -21,8 +21,8 @@
 	<script src="asciinema-player.js"></script>
 	<script charset="utf-8">
 
-		function linkify(time, line, pause) {
-			if($(this).html() == time) {
+		function linkify(time_el, time, line, pause) {
+			if(time_el.html() == time) {
 				$('#player .line').eq(line)
 					.css('cursor', 'pointer')
 					.hover(function(){
@@ -39,10 +39,10 @@
 
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
 
-			linkify('-00:50', 4, false);
-			linkify('-00:37', 5, false);
-			linkify('-00:22', 6, false);
-			linkify('-00:03', 7, true);
+			linkify($(this), '-00:50', 4, false);
+			linkify($(this), '-00:37', 5, false);
+			linkify($(this), '-00:22', 6, false);
+			linkify($(this), '-00:03', 7, true);
 
 			// // bash
 			// if($(this).html() == '-00:50') {
