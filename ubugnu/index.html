@@ -35,8 +35,8 @@
 					.click(function(){
 						window.open('bash/', '_blank');
 					})
+				if(pause) $('#player')[0].pause();
 			}
-			if(pause) $('#player')[0].pause();
 		}
 
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
