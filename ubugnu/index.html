@@ -13,9 +13,9 @@
 	<script src="asciinema-player.js"></script>
 	<script charset="utf-8">
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
-			if($(this).html() == '-00:03') {
-				$('#player')[0].pause();
-					// bash
+
+			// bash
+			if($(this).html() == '-00:50') {
 				$('#player .line').eq(4)
 					.css('cursor', 'pointer')
 					.hover(function(){
@@ -26,7 +26,10 @@
 					.click(function(){
 						window.open('bash/', '_blank');
 					})
-				// ror
+			}
+
+			// ror
+			if($(this).html() == '-00:37') {
 				$('#player .line').eq(5)
 					.css('cursor', 'pointer')
 					.hover(function(){
@@ -37,7 +40,10 @@
 					.click(function(){
 						window.open('ror/', '_blank');
 					})
-				// js
+			}
+
+			// js
+			if($(this).html() == '-00:22') {
 				$('#player .line').eq(6)
 					.css('cursor', 'pointer')
 					.hover(function(){
@@ -48,7 +54,11 @@
 					.click(function(){
 						window.open('js/', '_blank');
 					})
-				// py
+			}
+
+			// py
+			if($(this).html() == '-00:03') {
+				$('#player')[0].pause();
 				$('#player .line').eq(7)
 					.css('cursor', 'pointer')
 					.hover(function(){
@@ -60,6 +70,7 @@
 						window.open('py/', '_blank');
 					})
 			}
+
 		});
 	</script>
 </body>
