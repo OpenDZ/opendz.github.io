@@ -16,21 +16,41 @@
 			if($(this).html() == '-00:03') {
 				$('#player')[0].pause();
 					// bash
-				$('#player .line').eq(4).click(function(){
-					window.open('bash/', '_blank');
-				})
+				$('#player .line').eq(4)
+					.css('cursor', 'pointer')
+					.hover(function(){
+						$(this).css('color', 'green')
+					})
+					.click(function(){
+						window.open('bash/', '_blank');
+					})
 				// ror
-				$('#player .line').eq(5).click(function(){
-					window.open('ror/', '_blank');
-				})
+				$('#player .line').eq(5)
+					.css('cursor', 'pointer')
+					.hover(function(){
+						$(this).css('color', 'green')
+					})
+					.click(function(){
+						window.open('ror/', '_blank');
+					})
 				// js
-				$('#player .line').eq(6).click(function(){
-					window.open('js/', '_blank');
-				})
+				$('#player .line').eq(6)
+					.css('cursor', 'pointer')
+					.hover(function(){
+						$(this).css('color', 'green')
+					})
+					.click(function(){
+						window.open('js/', '_blank');
+					})
 				// py
-				$('#player .line').eq(7).click(function(){
-					window.open('py/', '_blank');
-				})
+				$('#player .line').eq(7)
+					.css('cursor', 'pointer')
+					.hover(function(){
+						$(this).css('color', 'green')
+					})
+					.click(function(){
+						window.open('py/', '_blank');
+					})
 			}
 		});
 	</script>
