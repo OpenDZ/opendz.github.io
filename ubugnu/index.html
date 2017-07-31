@@ -16,21 +16,21 @@
 			if($(this).html() == '-00:03') {
 				$('#player')[0].pause();
 					// bash
-				$('#player .line').eq(4).html(function(_, html) {
-				   	return html.replace(/cliquez ici/g, '<a href="bash/" target="_blank">cliquez ici</a>');
-				   });
+				$('#player .line').eq(4).click(function(){
+					window.open('bash/', '_blank');
+				})
 				// ror
-				$('#player .line').eq(5).html(function(_, html) {
-				   	return html.replace(/cliquez ici/g, '<a href="ror/"> target="_blank"cliquez ici</a>');
-				   });
+				$('#player .line').eq(5).click(function(){
+					window.open('ror/', '_blank');
+				})
 				// js
-				$('#player .line').eq(6).html(function(_, html) {
-				   	return html.replace(/cliquez ici/g, '<a href="js/">c target="_blank"liquez ici</a>');
-				   });
+				$('#player .line').eq(6).click(function(){
+					window.open('js/', '_blank');
+				})
 				// py
-				$('#player .line').eq(7).html(function(_, html) {
-				   	return html.replace(/cliquez ici/g, '<a href="py/">c target="_blank"liquez ici</a>');
-				   });
+				$('#player .line').eq(7).click(function(){
+					window.open('py/', '_blank');
+				})
 			}
 		});
 	</script>
