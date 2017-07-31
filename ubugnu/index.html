@@ -13,23 +13,25 @@
 	<script src="asciinema-player.js"></script>
 	<script charset="utf-8">
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
-			if($(this).html() == '-00:03') $('#player')[0].pause();
-			// bash
-			$('#player .line').eq(4).html(function(_, html) {
-			   	return html.replace(/cliquez ici/g, '<a src="bash/">cliquez ici</a>');
-			   });
-			// ror
-			$('#player .line').eq(5).html(function(_, html) {
-			   	return html.replace(/cliquez ici/g, '<a src="ror/">cliquez ici</a>');
-			   });
-			// js
-			$('#player .line').eq(6).html(function(_, html) {
-			   	return html.replace(/cliquez ici/g, '<a src="js/">cliquez ici</a>');
-			   });
-			// py
-			$('#player .line').eq(7).html(function(_, html) {
-			   	return html.replace(/cliquez ici/g, '<a src="py/">cliquez ici</a>');
-			   });
+			if($(this).html() == '-00:03') {
+				$('#player')[0].pause();
+					// bash
+				$('#player .line').eq(4).html(function(_, html) {
+				   	return html.replace(/cliquez ici/g, '<a src="bash/">cliquez ici</a>');
+				   });
+				// ror
+				$('#player .line').eq(5).html(function(_, html) {
+				   	return html.replace(/cliquez ici/g, '<a src="ror/">cliquez ici</a>');
+				   });
+				// js
+				$('#player .line').eq(6).html(function(_, html) {
+				   	return html.replace(/cliquez ici/g, '<a src="js/">cliquez ici</a>');
+				   });
+				// py
+				$('#player .line').eq(7).html(function(_, html) {
+				   	return html.replace(/cliquez ici/g, '<a src="py/">cliquez ici</a>');
+				   });
+			}
 		});
 	</script>
 </body>
