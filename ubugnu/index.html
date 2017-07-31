@@ -22,6 +22,8 @@
 	<script charset="utf-8">
 
 		function linkify(time, line, pause) {
+			console.log('time remaining', $('.time-remaining').html());
+			console.log(time);
 			if($('.time-remaining').html() == time) {
 				$('#player .line').eq(line)
 					.css('cursor', 'pointer')
