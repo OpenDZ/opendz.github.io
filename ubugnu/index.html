@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" type="text/css" href="asciinema-player.css" />
+	<link rel="stylesheet" type="text/css" href="/ubugnu/assets/stylesheets/asciinema-player.css" />
 	<script
 		src="http://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -18,7 +18,7 @@
 <body>
 	<center><h1>ubugnu<font color="#4286f4">:snippets</font><font color="#f26441">{live}</font></h1></center>
 	<asciinema-player id="player" src="welcome.json" cols="180" rows="40" speed="2" autoplay="autoplay"></asciinema-player>
-	<script src="asciinema-player.js"></script>
+	<script src="/ubugnu/assets/javascripts/asciinema-player.js"></script>
 	<script charset="utf-8">
 
 		function linkify(time, line, dir, pause) {
@@ -39,11 +39,11 @@
 
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
 
-			linkify('-00:50', 4, 'bash/', false);
-			linkify('-00:41', 5, 'ror/', false);
-			linkify('-00:32', 6, 'js/', false);
-			linkify('-00:23', 7, 'py/', false);
-			linkify('-00:11', 8, 'misc/', false);
+			linkify('-00:50', 4, 'snippets/bash/', false);
+			linkify('-00:41', 5, 'snippets/ror/', false);
+			linkify('-00:32', 6, 'snippets/js/', false);
+			linkify('-00:23', 7, 'snippets/py/', false);
+			linkify('-00:11', 8, 'snippets/misc/', false);
 			if($('.time-remaining').html() == '-00:03') $('#player')[0].pause();
 
 		});
