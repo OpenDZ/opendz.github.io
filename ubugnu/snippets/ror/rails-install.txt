@@ -1,0 +1,43 @@
+# tout d'abord on doit installer rvm (ruby version manager)
+# cliquez ici pour plus de détails sur rvm
+# l'installation se fait en utilisant un script bash présent ici:
+# get.rvm.io
+wget -qO- https://get.rvm.io | bash -s stable
+# maintenant on installe la dernière version de ruby en utilisant rvm
+rvm install ruby --latest
+# on list les version de ruby installées, comme on s'y attend ...
+rvm list rubies
+# on fait de cette version la version par défaut
+rvm --default use ruby-2.4.0p0
+# on a besoin du javascript runtime pour compiler les codes assets dans rails, nodejs est parfait
+# cliquez ici pour plus de détails sur nodejs
+sudo apt-get install nodejs
+# on ajoute node au $PATH
+vim ~/.bashrc
+PATH=/usr/bin/node:$PATH
+# rubygem est le gestionnaire de paquets de ruby, il sert à installer des "gems": des programmes et bibliothèques ruby
+# on le met à jour au cas où
+gem update --system
+# pour des installations de "gems" plus rapides, on va désactiver l'installation de la doc
+# croyez moi l'installation de la doc peut prendre un temps fou!
+echo "gem: --no-document" >> ~/.gemrc
+# bundler est une gem qui sert à gérer les dépendences des autres gems, crucial pour rails
+# cliquez ici pour plus de détails sur bundler
+gem install bundler
+# nokogiri est une gem de laquelle dépendent beaucoup d'autres gems, sa compilation prend du temps
+# donc on l'installe une fois pour toutes pour qu'elle soit disponible sans avoir a se recompiler à chaque fois
+# (facultatif)
+gem install nokogiri
+# on installe la dernière version stable de rails
+gem install rails
+# on vérifier laquelle a été installée
+rails -v
+# on créé une "gemset" (cliquez ici pour plus de détails) regroupant la dernière version de ruby et de rails
+rvm use ruby-2.4.0p0@rails5.1.2 --create
+# on est fin prêts pour notre première application rails
+rails new myapp
+# une application rails vient avec un serveur embarqué
+cd myapp
+rails server
+# ouvrez votre navigateur sur localhost:3000
+links http://localhost:3000/
