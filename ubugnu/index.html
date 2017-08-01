@@ -12,7 +12,6 @@
 	<style type="text/css">
 		html, body {
 			font-family: 'Oxygen Mono', monospace;
-			padding: 10px;
 		}
 	</style>
 <title>Home | Ubugnu:snippets{live}</title>
@@ -24,7 +23,7 @@
 	<script charset="utf-8">
 
 		function linkify(time, line, dir, pause) {
-			if($('.time-remaining').html() == time) {
+			if($player.currentTime >= time) {
 				$('#player .line').eq(line)
 					.css('cursor', 'pointer')
 					.hover(function(){
@@ -32,6 +31,7 @@
 					}, function() {
 						$(this).css('color', '')
 					})
+					.off("click")
 					.click(function(){
 						window.open(dir, '_blank');
 					})
@@ -39,14 +39,16 @@
 			}
 		}
 
+		player = $('#player')[0]
+
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
 
-			linkify('-00:50', 4, 'snippets/bash/', false);
-			linkify('-00:41', 5, 'snippets/ror/', false);
-			linkify('-00:32', 6, 'snippets/js/', false);
-			linkify('-00:23', 7, 'snippets/py/', false);
-			linkify('-00:11', 8, 'snippets/misc/', false);
-			if($('.time-remaining').html() == '-00:03') $('#player')[0].pause();
+			linkify(24, 4, 'snippets/bash/', false);
+			linkify(33, 5, 'snippets/ror/', false);
+			linkify(42, 6, 'snippets/js/', false);
+			linkify(50, 7, 'snippets/py/', false);
+			linkify(62, 8, 'snippets/misc/', false);
+			if(player.currentTime >= 69) player.pause();
 
 		});
 	</script>
