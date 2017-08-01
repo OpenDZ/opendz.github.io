@@ -43,7 +43,8 @@
 			linkify('-00:41', 5, 'ror/', false);
 			linkify('-00:32', 6, 'js/', false);
 			linkify('-00:23', 7, 'py/', false);
-			linkify('-00:11', 8, 'misc/', true);
+			linkify('-00:11', 8, 'misc/', false);
+			if($('.time-remaining').html() == '-00:03') $('#player')[0].pause();
 
 		});
 	</script>
