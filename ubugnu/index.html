@@ -46,12 +46,15 @@
 
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
 
-			linkify(24, 4, 'snippets/bash/', false);
-			linkify(33, 5, 'snippets/ror/', false);
-			linkify(42, 6, 'snippets/js/', false);
-			linkify(50, 7, 'snippets/py/', false);
-			linkify(62, 8, 'snippets/misc/', false);
-			if(player.currentTime >= 69) player.pause();
+			// linkify(24, 4, 'snippets/bash/', false);
+			// linkify(33, 5, 'snippets/ror/', false);
+			// linkify(42, 6, 'snippets/js/', false);
+			// linkify(50, 7, 'snippets/py/', false);
+			// linkify(62, 8, 'snippets/misc/', false);
+			// if(player.currentTime >= 69) player.pause();
+
+			if(player.currentTime == 220) player.speed = 8
+			if(player.currentTime == 550) player.speed = 3
 
 		});
 	</script>
