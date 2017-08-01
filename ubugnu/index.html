@@ -22,11 +22,10 @@
 	<script charset="utf-8">
 
 		function linkify(time, line, pause) {
-			console.log('time remaining', $('.time-remaining').html());
-			console.log(time);
 			if($('.time-remaining').html() == time) {
 				$('#player .line').eq(line)
 					.css('cursor', 'pointer')
+					.css('text-decoration', 'underline')
 					.hover(function(){
 						$(this).css('color', '#4ebf22')
 					}, function() {
@@ -45,63 +44,6 @@
 			linkify('-00:37', 5, false);
 			linkify('-00:22', 6, false);
 			linkify('-00:03', 7, true);
-
-			// // bash
-			// if($(this).html() == '-00:50') {
-			// 	$('#player .line').eq(4)
-			// 		.css('cursor', 'pointer')
-			// 		.hover(function(){
-			// 			$(this).css('color', '#4ebf22')
-			// 		}, function() {
-			// 			$(this).css('color', '')
-			// 		})
-			// 		.click(function(){
-			// 			window.open('bash/', '_blank');
-			// 		})
-			// }
-
-			// // ror
-			// if($(this).html() == '-00:37') {
-			// 	$('#player .line').eq(5)
-			// 		.css('cursor', 'pointer')
-			// 		.hover(function(){
-			// 			$(this).css('color', '#4ebf22')
-			// 		}, function() {
-			// 			$(this).css('color', '')
-			// 		})
-			// 		.click(function(){
-			// 			window.open('ror/', '_blank');
-			// 		})
-			// }
-
-			// // js
-			// if($(this).html() == '-00:22') {
-			// 	$('#player .line').eq(6)
-			// 		.css('cursor', 'pointer')
-			// 		.hover(function(){
-			// 			$(this).css('color', '#4ebf22')
-			// 		}, function() {
-			// 			$(this).css('color', '')
-			// 		})
-			// 		.click(function(){
-			// 			window.open('js/', '_blank');
-			// 		})
-			// }
-
-			// // py
-			// if($(this).html() == '-00:03') {
-			// 	$('#player')[0].pause();
-			// 	$('#player .line').eq(7)
-			// 		.css('cursor', 'pointer')
-			// 		.hover(function(){
-			// 			$(this).css('color', '#4ebf22')
-			// 		}, function() {
-			// 			$(this).css('color', '')
-			// 		})
-			// 		.click(function(){
-			// 			window.open('py/', '_blank');
-			// 		})
-			// }
 
 		});
 	</script>
