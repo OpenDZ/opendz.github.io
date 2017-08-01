@@ -13,26 +13,25 @@
 			padding: 10px;
 		}
 	</style>
-<title>Ubugnu | home</title>
+<title>Home | Ubugnu:snippets{live}</title>
 </head>
 <body>
-	<center><h1>ubugnu::snippets</h1></center>
+	<center><h1>ubugnu<span color="#4286f4">:snippets</span><span color="#f26441">{live}</span></h1></center>
 	<asciinema-player id="player" src="welcome.json" cols="180" rows="40" speed="2" autoplay="autoplay"></asciinema-player>
 	<script src="asciinema-player.js"></script>
 	<script charset="utf-8">
 
-		function linkify(time, line, pause) {
+		function linkify(time, line, dir, pause) {
 			if($('.time-remaining').html() == time) {
 				$('#player .line').eq(line)
 					.css('cursor', 'pointer')
-					.css('text-decoration', 'underline')
 					.hover(function(){
 						$(this).css('color', '#4ebf22')
 					}, function() {
 						$(this).css('color', '')
 					})
 					.click(function(){
-						window.open('bash/', '_blank');
+						window.open(dir, '_blank');
 					})
 				if(pause) $('#player')[0].pause();
 			}
@@ -40,11 +39,11 @@
 
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
 
-			// linkify('-00:50', 4, false);
-			// linkify('-00:37', 5, false);
-			// linkify('-00:22', 6, false);
-			// linkify('-00:03', 7, false);
-			// linkify('-00:03', 8, true);
+			linkify('-00:50', 4, 'bash/', false);
+			linkify('-00:41', 5, 'ror/', false);
+			linkify('-00:32', 6, 'js/', false);
+			linkify('-00:23', 7, 'py/', false);
+			linkify('-00:11', 8, 'misc/', true);
 
 		});
 	</script>
