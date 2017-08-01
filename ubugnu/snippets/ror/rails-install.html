@@ -7,6 +7,7 @@
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<style type="text/css">
 		html, body {
@@ -17,7 +18,7 @@
 <title>Install Rails | Ubugnu:snippets{live}</title>
 </head>
 <body>
-	<center><h1>ubugnu<font color="#4286f4">:snippets</font><font color="#f26441">{live}</font></h1></center>
+	<center><h1>install<font color="#4286f4">:rails</font><font color="#f26441">{live}</font></h1></center>
 	<asciinema-player id="player" src="./rails-install.json" cols="180" rows="40" speed="3" autoplay="autoplay"></asciinema-player>
 	<script src="/ubugnu/assets/javascripts/asciinema-player.js"></script>
 	<script charset="utf-8">
@@ -40,13 +41,26 @@
 
 		$('.time-remaining').bind("DOMSubtreeModified",function(){
 
-			linkify('-26:42', 3, 'https://rvm.io/', false);
-			linkify('-26:19', 5, 'https://get.rvm.io', false);
-			// linkify('-00:32', 6, 'snippets/js/', false);
-			// linkify('-00:23', 7, 'snippets/py/', false);
+			linkify('-26:42', 2, 'https://rvm.io/', false);
+			linkify('-26:19', 4, 'https://get.rvm.io', false);
+			linkify('-14:10', 38, 'https://nodejs.org/', false);
+			linkify('-10:10', 39, 'snippets/py/', false);
 			// linkify('-00:11', 8, 'snippets/misc/', false);
-			// if($('.time-remaining').html() == '-00:03') $('#player')[0].pause();
-
+			if($('.time-remaining').html() == '-06:34') {
+				$('#player')[0].pause();
+				alert("ne les écoutez pas! n'installez pas ruby-railties avec apt!!!");
+				$('#player')[0].play();
+			}
+			if($('.time-remaining').html() == '-06:11') {
+				$('#player')[0].pause();
+				alert("je vais vous épargner le n'importe quoi que j'ai fais, je vous dirige directement vers la solution...");
+				$('#player')[0].currentTime = 25.10
+			}
+			if($('.time-remaining').html() == '-00:24') {
+				$('#player')[0].pause();
+				alert("ça ne marchera pas avec links, pas la peine de continuer ;-)");
+				$('#player')[0].play()
+			}
 		});
 	</script>
 </body>
